@@ -1,1 +1,39 @@
+====== Code Translation – Key Elements to Change ======
 
+1) Variable Declarations : 
+Remove data types; use dynamic variable assignment.
+
+2) Print Statements : 
+Replace language-specific print functions with target language’s print syntax.
+
+3) Function/Method Definitions : 
+Convert access modifiers and return types to appropriate function syntax.
+Replace curly braces with indentation and colon-based blocks.
+
+4) Class Definitions : 
+Remove access modifiers and braces.
+Use the target language’s class syntax and constructor format.
+
+5) Object Access / References : 
+Replace language-specific object references (e.g., this.) with the appropriate equivalent (e.g., self.).
+
+6) Control Structures : 
+Convert if, else, for, while, and other control statements to match the target language’s structure and indentation rules.
+
+7) Access Modifiers :
+Remove or adapt visibility modifiers (public, private, etc.) to the target language’s conventions.
+
+8) Data Structures : 
+Replace language-specific structures like lists, arrays, maps, and sets with equivalent ones in the target language.
+
+9) Exception Handling : 
+Convert try, catch, finally blocks to the error handling structure used in the target language.
+
+10) Semicolons and Braces : 
+Remove semicolons and braces; use indentation and colons where needed.
+
+11) Import Statements / Libraries :
+Replace or adapt import statements and library usage to match the target language’s ecosystem.
+
+12) Main Function / Entry Point :
+Adjust the entry point syntax (main function) to the format expected in the target language.
