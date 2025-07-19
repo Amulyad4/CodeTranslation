@@ -1,0 +1,204 @@
+
+/* =======================
+   Base Layout & Reset
+========================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ed 100%);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #2d3748;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =======================
+   Main Container
+========================== */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =======================
+   Card Layout
+========================== */
+.card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1.5rem 2rem;
+    color: white;
+}
+
+.card-header h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.card-body {
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =======================
+   Code Editor Layout
+========================== */
+.editor-container {
+    display: flex;
+    gap: 2rem;
+    flex: 1;
+    min-height: 0; /* Crucial for proper flex behavior */
+}
+
+@media (max-width: 992px) {
+    .editor-container {
+        flex-direction: column;
+    }
+}
+
+.editor-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.editor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.language-selector {
+    flex: 1;
+    max-width: 200px;
+}
+
+.swap-button {
+    background: none;
+    border: none;
+    color: #667eea;
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.code-editor {
+    flex: 1;
+    min-height: 400px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.25rem;
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    resize: none;
+    background: #f8fafc;
+}
+
+/* =======================
+   Button Controls
+========================== */
+.controls {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.action-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.primary-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+}
+
+.secondary-button {
+    background: white;
+    border: 1px solid #e2e8f0;
+    color: #4a5568;
+}
+
+/* =======================
+   Utility Classes
+========================== */
+.flex-spacer {
+    flex: 1;
+}
+
+/* =======================
+   Responsive Adjustments
+========================== */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1.5rem;
+    }
+    
+    .editor-container {
+        gap: 1.5rem;
+    }
+    
+    .code-editor {
+        min-height: 300px;
+    }
+    
+    .controls {
+        flex-direction: column;
+    }
+    
+    .action-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .card-header {
+        padding: 1rem;
+    }
+    
+    .card-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .code-editor {
+        min-height: 250px;
+        padding: 1rem;
+    }
+}
